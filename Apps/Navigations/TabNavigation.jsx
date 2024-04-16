@@ -11,6 +11,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreenStackNav from './HomeScreenStackNav';
 import ProfileScreenStackNav from './ProfileScreenStackNav';
+import ExploreScreenStackNav from './ExploreScreenStackNav';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +28,7 @@ options={{
     <Entypo name="home" size={size} color={color} /> 
   )
 }} />
-<Tab.Screen name='Explorar' component={ExploreScreen}
+<Tab.Screen name='Explorar' component={ExploreScreenStackNav}
 options={{
   tabBarLabel:({color})=>(
     <Text style={{color:color,fontSize:12,marginBottom:3}}>Explorar</Text>

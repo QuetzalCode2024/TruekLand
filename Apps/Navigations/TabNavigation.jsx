@@ -9,6 +9,8 @@ import { Entypo } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import HomeScreenStackNav from './HomeScreenStackNav';
+import ProfileScreenStackNav from './ProfileScreenStackNav';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,7 +19,7 @@ export default function TabNavigation() {
   <Tab.Navigator screenOptions={{
     headerShown:false
   }}>
-<Tab.Screen name='Inicio' component={HomeScreen}
+<Tab.Screen name='Inicio-nav' component={HomeScreenStackNav}
 options={{
   tabBarLabel:({color})=>(
     <Text style={{color:color,fontSize:12,marginBottom:3}}>Inicio</Text>
@@ -41,7 +43,7 @@ options={{
     <MaterialIcons name="post-add" size={size} color={color} />
   )
 }}/>
-<Tab.Screen name='Perfil' component={ProfileScreen}
+<Tab.Screen name='Perfil' component={ProfileScreenStackNav}
 options={{
   tabBarLabel:({color})=>(
     <Text style={{color:color,fontSize:12,marginBottom:3}}>Perfil</Text>
